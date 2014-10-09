@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 
-public class MainActivity extends FragmentActivity 
+public class MainActivity extends FragmentActivity
 {
 	// Fragment TabHost as topTabs
 
@@ -19,6 +19,8 @@ public class MainActivity extends FragmentActivity
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        System.out.println("This is a change");
         
         topTabs = (FragmentTabHost)findViewById(android.R.id.tabhost);
         topTabs.setup(this, getSupportFragmentManager(), android.R.id.tabcontent);
