@@ -30,6 +30,6 @@ public class MainActivity extends FragmentActivity
         topTabs.addTab(topTabs.newTabSpec("contacts").setIndicator("Mentors"),
         		UpdatesFragment.class, null);
         topTabs.addTab(topTabs.newTabSpec("custom").setIndicator("Schedule"),
-        		UpdatesFragment.class, null);
+        		ScheduleFragment.class, null);
     }
 }
