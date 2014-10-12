@@ -4,6 +4,7 @@ public class ScheduleEvent {
 	
 	private String eventTitle;
 	private String eventDescription;
+	private String eventTime;
 	
 	public String getEventTitle() {
 		return eventTitle;
@@ -17,5 +18,13 @@ public class ScheduleEvent {
 	public void setEventDescription(String eventDescription) {
 		this.eventDescription = eventDescription;
 	}
+	public String getEventTime() {
+		return eventTime;
+	}
+	public void setEventTime(String eventTime) {
+		this.eventTime = eventTime;
+	}
+	
+	
 
 }

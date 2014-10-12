@@ -29,14 +29,16 @@ public class ScheduleFragment extends android.support.v4.app.Fragment {
 		
 		eventsList = new ArrayList<ScheduleEvent>();
 		eventsList.add(buildStubbedScheduleEvent());
+		eventsList.add(buildStubbedScheduleEvent());
+
 		
 		scheduleEventsListView.setAdapter( new ScheduleAdapter(getActivity(), R.layout.schedule_list_item, eventsList ) );
 	   
 		scheduleEventsListView.setOnItemClickListener(new OnItemClickListener() {
 	        @Override
 	        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-	                Updates o = (Updates) parent.getItemAtPosition(position); 
-	                Toast.makeText(getActivity(), o.getTitle().toString(), Toast.LENGTH_SHORT).show();
+	                ScheduleEvent o = (ScheduleEvent) parent.getItemAtPosition(position); 
+	                Toast.makeText(getActivity(), o.getEventTitle().toString(), Toast.LENGTH_SHORT).show();
 	                }
 	        });      
 		
@@ -48,7 +50,7 @@ public class ScheduleFragment extends android.support.v4.app.Fragment {
 		ScheduleEvent event = new ScheduleEvent();
 		event.setEventTitle("Some Event Title");
 		event.setEventDescription("This is a very long and detailed event description. Breakfast is the most important part of the day.");
-		
+		event.setEventTime("4:30 PM");
 		return event;
 	}
 }
